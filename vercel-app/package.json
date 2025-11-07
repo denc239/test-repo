@@ -1,0 +1,11 @@
+{
+  "name": "discord-vercel-app",
+  "version": "1.0.0",
+  "description": "Discord-like application for Vercel deployment",
+  "scripts": {
+    "start": "node api/index.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
