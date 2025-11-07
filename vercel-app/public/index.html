@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Discord Clone Prototype</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #2f3136;
+        color: #fff;
+      }
+      #app {
+        padding: 20px;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+      .controls {
+        margin-bottom: 20px;
+      }
+      .videos {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      video {
+        width: 300px;
+        height: 200px;
+        background-color: #000;
+      }
+      #localVideo {
+        border: 2px solid #7289da;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <h1>Discord Clone Prototype</h1>
+      <div class="controls">
+        <input id="roomId" type="text" placeholder="Room ID" />
+        <select id="resolution">
+          <option value="720">720p</option>
+          <option value="1080">1080p</option>
+          <option value="2160">4K</option>
+        </select>
+        <select id="fps">
+          <option value="30">30 fps</option>
+          <option value="60">60 fps</option>
+        </select>
+        <button id="joinBtn">Join Room</button>
+      </div>
+      <div>
+        <button id="toggleScreenShare">Toggle Screen Share</button>
+      </div>
+      <div class="videos">
+        <video id="localVideo" autoplay muted playsinline></video>
+        <div id="remoteVideos"></div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
